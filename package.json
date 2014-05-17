@@ -1,0 +1,44 @@
+{
+  "name": "current-path",
+  "version": "0.0.0",
+  "description": "Get the path of the current directory in Finder (OS X) and Explorer (Windows)",
+  "license": "MIT",
+  "bin": {
+    "current-path": "cli.js"
+  },
+  "repository": "sindresorhus/current-path",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js",
+    "cli.js",
+    "vendor"
+  ],
+  "keywords": [
+    "cli",
+    "bin",
+    "dir",
+    "directory",
+    "directories",
+    "shell",
+    "script",
+    "path",
+    "finder",
+    "explorer",
+    "osx",
+    "win",
+    "windows"
+  ],
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
