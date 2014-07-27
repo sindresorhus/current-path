@@ -1,6 +1,6 @@
 {
   "name": "current-path",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Get the path of the current directory in Finder (OS X) and Explorer (Windows)",
   "license": "MIT",
   "bin": {
