@@ -3,7 +3,7 @@ var path = require('path');
 var execFile = require('child_process').execFile;
 
 function osx(cb) {
-	var script = 'tell app "Finder" to POSIX path of (insertion location as alias)';
+	var script = 'tell app "Finder"\ntry\nPOSIX path of (insertion location as alias)\non error\nPOSIX path of (path to desktop folder as alias)\nend try\nend tell';
 
 	execFile('osascript', ['-e', script], function (err, stdout) {
 		if (err) {
