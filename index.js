@@ -1,16 +1,18 @@
 'use strict';
 var path = require('path');
 var execFile = require('child_process').execFile;
+var runApplescript = require('run-applescript');
 
 function osx(cb) {
 	var script = 'tell app "Finder"\ntry\nPOSIX path of (insertion location as alias)\non error\nPOSIX path of (path to desktop folder as alias)\nend try\nend tell';
 
-	execFile('osascript', ['-e', script], function (err, stdout) {
+	runApplescript(script, function (err, res) {
 		if (err) {
-			return cb(err);
+			cb(err);
+			return;
 		}
 
-		cb(null, stdout.trim());
+		cb(null, res);
 	});
 }
 
@@ -19,7 +21,8 @@ function win(cb) {
 
 	execFile(bin, function (err, stdout) {
 		if (err) {
-			return cb(err);
+			cb(err);
+			return;
 		}
 
 		cb(null, stdout.trim());
@@ -36,11 +39,13 @@ module.exports = function (cb) {
 	}
 
 	if (process.platform === 'darwin') {
-		return osx(cb);
+		osx(cb);
+		return
 	}
 
 	if (process.platform === 'win32') {
-		return win(cb);
+		win(cb);
+		return
 	}
 
 	linux(cb);
