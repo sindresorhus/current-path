@@ -3,14 +3,14 @@
   "version": "1.0.1",
   "description": "Get the path of the current directory in Finder (OS X) and Explorer (Windows)",
   "license": "MIT",
-  "bin": {
-    "current-path": "cli.js"
-  },
   "repository": "sindresorhus/current-path",
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "http://sindresorhus.com"
+  },
+  "bin": {
+    "current-path": "cli.js"
   },
   "engines": {
     "node": ">=0.10.0"

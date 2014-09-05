@@ -1,24 +1,26 @@
 #!/usr/bin/env node
 'use strict';
 var pkg = require('./package.json');
-var currentPath = require('./index');
+var currentPath = require('./');
+var argv = process.argv.slice(2);
 
 function help() {
 	console.log([
-		pkg.description,
 		'',
-		'Example',
-		'  $ current-path',
-		'  /Users/sindresorhus/dev/current-path'
+		'  ' + pkg.description,
+		'',
+		'  Example',
+		'    $ current-path',
+		'    /Users/sindresorhus/dev/current-path'
 	].join('\n'));
 }
 
-if (process.argv.indexOf('--help') !== -1) {
+if (argv.indexOf('--help') !== -1) {
 	help();
 	return;
 }
 
-if (process.argv.indexOf('--version') !== -1) {
+if (argv.indexOf('--version') !== -1) {
 	console.log(pkg.version);
 	return;
 }

@@ -3,14 +3,11 @@
 > Get the path of the current directory in Finder *(OS X)* and Explorer *(Windows)*
 
 
-## Install
+## Usage
 
 ```sh
 $ npm install --save current-path
 ```
-
-
-## Usage
 
 ```js
 var currentPath = require('current-path');
@@ -32,12 +29,12 @@ currentPath(function (err, path) {
 $ npm install --global current-path
 ```
 
-```sh
+```
 $ current-path --help
 
-Example
-  $ current-path
-  /Users/sindresorhus/dev/current-path
+  Example
+    $ current-path
+    /Users/sindresorhus/dev/current-path
 ```
 
 

@@ -1,6 +1,6 @@
 'use strict';
 var assert = require('assert');
-var currentPath = require('./index');
+var currentPath = require('./');
 
 it('should return the current file manager path', function (cb) {
 	currentPath(function (err, path) {
