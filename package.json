@@ -37,6 +37,7 @@
     "windows"
   ],
   "dependencies": {
+    "meow": "^3.1.0",
     "run-applescript": "^1.0.0"
   },
   "devDependencies": {
