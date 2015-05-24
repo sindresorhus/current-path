@@ -5,7 +5,7 @@
 
 ## Usage
 
-```sh
+```
 $ npm install --save current-path
 ```
 
@@ -13,10 +13,6 @@ $ npm install --save current-path
 var currentPath = require('current-path');
 
 currentPath(function (err, path) {
-	if (err) {
-		throw err;
-	}
-
 	console.log(path);
 	//=> /Users/sindresorhus/dev/current-path
 });
@@ -25,7 +21,7 @@ currentPath(function (err, path) {
 
 ## CLI
 
-```sh
+```
 $ npm install --global current-path
 ```
 
