@@ -8,7 +8,7 @@ meow({
 		'Example',
 		'  $ current-path',
 		'  /Users/sindresorhus/dev/current-path'
-	].join('\n')
+	]
 });
 
 currentPath(function (err, path) {
