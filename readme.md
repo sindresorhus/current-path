@@ -10,11 +10,11 @@ $ npm install --save current-path
 ```
 
 ```js
-var currentPath = require('current-path');
+const currentPath = require('current-path');
 
-currentPath(function (err, path) {
+currentPath((err, path) => {
 	console.log(path);
-	//=> /Users/sindresorhus/dev/current-path
+	//=> '/Users/sindresorhus/dev/current-path'
 });
 ```
 
