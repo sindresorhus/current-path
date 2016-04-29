@@ -12,11 +12,18 @@ $ npm install --save current-path
 ```js
 const currentPath = require('current-path');
 
-currentPath((err, path) => {
+currentPath().then(path => {
 	console.log(path);
 	//=> '/Users/sindresorhus/dev/current-path'
 });
 ```
+
+
+## API
+
+### currentPath()
+
+Returns a promise for the current directory Finder or Explorer.
 
 
 ## CLI
@@ -36,4 +43,4 @@ $ current-path --help
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

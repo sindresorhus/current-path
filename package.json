@@ -11,10 +11,10 @@
   },
   "bin": "cli.js",
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "xo && ava"
   },
   "files": [
     "index.js",
@@ -37,10 +37,15 @@
     "windows"
   ],
   "dependencies": {
+    "execa": "^0.4.0",
     "meow": "^3.3.0",
-    "run-applescript": "^1.0.0"
+    "run-applescript": "^3.0.0"
   },
   "devDependencies": {
-    "mocha": "*"
+    "ava": "*",
+    "xo": "*"
+  },
+  "xo": {
+    "esnext": true
   }
 }
