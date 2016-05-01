@@ -9,7 +9,6 @@
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com"
   },
-  "bin": "cli.js",
   "engines": {
     "node": ">=4"
   },
@@ -18,14 +17,14 @@
   },
   "files": [
     "index.js",
-    "cli.js",
     "vendor"
   ],
   "keywords": [
-    "cli-app",
-    "cli",
-    "dir",
+    "current",
     "directory",
+    "folder",
+    "dir",
+    "active",
     "directories",
     "shell",
     "script",
@@ -38,7 +37,6 @@
   ],
   "dependencies": {
     "execa": "^0.4.0",
-    "meow": "^3.3.0",
     "run-applescript": "^3.0.0"
   },
   "devDependencies": {

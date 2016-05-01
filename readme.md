@@ -23,22 +23,12 @@ currentPath().then(path => {
 
 ### currentPath()
 
-Returns a promise for the current directory Finder or Explorer.
+Returns a promise for the current directory in Finder or Explorer.
 
 
-## CLI
+## Related
 
-```
-$ npm install --global current-path
-```
-
-```
-$ current-path --help
-
-  Example
-    $ current-path
-    /Users/sindresorhus/dev/current-path
-```
+- [current-path-cli](https://github.com/sindresorhus/current-path-cli) - CLI for this module
 
 
 ## License
