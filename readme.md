@@ -1,6 +1,6 @@
 # current-path [![Build Status](https://travis-ci.org/sindresorhus/current-path.svg?branch=master)](https://travis-ci.org/sindresorhus/current-path)
 
-> Get the path of the current directory in Finder *(OS X)* and Explorer *(Windows)*
+> Get the path of the current directory in Finder *(macOS)* and Explorer *(Windows)*
 
 
 ## Usage

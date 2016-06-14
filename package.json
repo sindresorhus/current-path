@@ -1,7 +1,7 @@
 {
   "name": "current-path",
   "version": "2.0.0",
-  "description": "Get the path of the current directory in Finder (OS X) and Explorer (Windows)",
+  "description": "Get the path of the current directory in Finder (macOS) and Explorer (Windows)",
   "license": "MIT",
   "repository": "sindresorhus/current-path",
   "author": {
@@ -31,6 +31,7 @@
     "path",
     "finder",
     "explorer",
+    "macos",
     "osx",
     "win",
     "windows"
