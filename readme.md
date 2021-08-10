@@ -2,35 +2,25 @@
 
 > Get the path of the current directory in Finder *(macOS)* and Explorer *(Windows)*
 
-
 ## Usage
 
 ```
-$ npm install --save current-path
+$ npm install current-path
 ```
 
 ```js
-const currentPath = require('current-path');
+import currentPath from 'current-path';
 
-currentPath().then(path => {
-	console.log(path);
-	//=> '/Users/sindresorhus/dev/current-path'
-});
+console.log(await currentPath());
+//=> '/Users/sindresorhus/dev/current-path'
 ```
-
 
 ## API
 
 ### currentPath()
 
-Returns a promise for the current directory in Finder or Explorer.
-
+Returns a `Promise<string>` with current directory in Finder or Explorer.
 
 ## Related
 
 - [current-path-cli](https://github.com/sindresorhus/current-path-cli) - CLI for this module
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

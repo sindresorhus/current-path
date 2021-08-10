@@ -1,11 +1,11 @@
-'use strict';
-const path = require('path');
-const execa = require('execa');
-const runApplescript = require('run-applescript');
+import process from 'node:process';
+import {fileURLToPath} from 'node:url';
+import execa from 'execa';
+import {runAppleScriptAsync} from 'run-applescript';
 
-module.exports = () => {
+export default async function currentPath() {
 	if (process.platform === 'darwin') {
-		return runApplescript(`
+		return runAppleScriptAsync(`
 			tell app "Finder"
 				try
 					POSIX path of (insertion location as alias)
@@ -17,8 +17,9 @@ module.exports = () => {
 	}
 
 	if (process.platform === 'win32') {
-		return execa(path.join(__dirname, 'vendor/cdwhere/cdwhere.exe'));
+		const binaryPath = fileURLToPath(new URL('vendor/cdwhere/cdwhere.exe', import.meta.url));
+		return execa(binaryPath);
 	}
 
-	return Promise.reject(new Error('Linux is not supported'));
-};
+	throw new Error('Linux is not supported');
+}

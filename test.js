@@ -1,6 +1,6 @@
 import test from 'ava';
-import m from './';
+import currentPath from './index.js';
 
-test(async t => {
-	t.truthy(await m());
+test('main', async t => {
+	t.truthy(await currentPath());
 });
